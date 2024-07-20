@@ -12,9 +12,6 @@
 
 interface IListener
 {
-  void Registers();
-  void Unregisters();
-  
   void OnEvent(CEvent* event);
 };
 

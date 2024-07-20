@@ -19,14 +19,16 @@ class CTesteListener : public IListener
     ~CTesteListener();
 
     // Methods
-    void Registers();
-    void Unregisters();
-
     void OnEvent(CEvent* event);
 
   protected:
     void OnTick(CTickEvent* event);
     void OnStart(CStartEvent* event);
+
+  private:
+    // Registers
+    void Registers();
+    void Unregisters();
 };
 
 /**
