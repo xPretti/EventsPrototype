@@ -16,6 +16,8 @@ class CTickEvent : public CEvent
     ~CTickEvent();
     
     string GetName() { return ("Tick, Tack"); };
+    
+    CTickEvent* GetEvent() override { return (&this); };
 };
 
 /**

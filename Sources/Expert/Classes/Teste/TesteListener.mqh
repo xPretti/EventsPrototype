@@ -47,20 +47,9 @@ void CTesteListener::OnEvent(CEvent* event)
 {
   switch(event.GetType())
     {
-    case EVENT_TYPE_START:
-      {
-        OnStart(dynamic_cast<CStartEvent*>(event));
-        break;
-      }
-    case EVENT_TYPE_TICK:
-      {
-        OnTick(dynamic_cast<CTickEvent*>(event));
-        break;
-      }
-    default:
-      {
-        break;
-      }
+    case EVENT_TYPE_START: OnStart(event); break;
+    case EVENT_TYPE_TICK:  OnTick(event); break;
+    default:               break;
     }
 }
 

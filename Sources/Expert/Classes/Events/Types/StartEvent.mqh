@@ -16,6 +16,8 @@ class CStartEvent : public CEvent
     ~CStartEvent();
     
     string GetStarting() { return ("Starting..."); };
+
+    CStartEvent* GetEvent() override { return (&this); };
 };
 
 /**

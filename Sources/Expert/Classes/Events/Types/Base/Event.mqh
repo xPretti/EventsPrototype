@@ -23,6 +23,10 @@ class CEvent
     // Properties
     //- GET
     ENUM_EVENT_TYPE GetType() { return (_type); };
+
+  public:
+    // References
+    virtual void* GetEvent() = 0;
 };
 
 /**
