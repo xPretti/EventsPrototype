@@ -12,7 +12,6 @@
 
 #include "Sources/Expert/Classes/Teste/TesteListener.mqh"
 
-#include "Sources/Expert/Classes/Events/Types/TickEvent.mqh"
 
 // Classes globais
 CTesteListener testeListener;
@@ -32,7 +31,7 @@ int OnInit()
   Print("\n\n\n");
   
   CEventsManager* eventsManager = CEventsManager::GetInstance();
-  if(CPointer::IsValid(eventsManager))
+  if(CPointerUtils::IsValid(eventsManager))
     {
       Print("Eventos iniciados com sucesso!");
     }

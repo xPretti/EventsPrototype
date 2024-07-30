@@ -1,17 +1,17 @@
 //+------------------------------------------------------------------+
-//|                                                      Pointer.mqh |
+//|                                                 PointerUtils.mqh |
 //|                                        Copyright 2023, UpCoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
 
-#ifndef POINTER_INCLUDED
-#define POINTER_INCLUDED
+#ifndef POINTERUTILS_INCLUDED
+#define POINTERUTILS_INCLUDED
 
-class CPointer
+class CPointerUtils
 {
   public:
-    CPointer();
-    ~CPointer();
+    CPointerUtils();
+    ~CPointerUtils();
 
     // Verify
     template<typename T>
@@ -25,10 +25,10 @@ class CPointer
 /**
  * Construtores e Destrutores
  */
-CPointer::CPointer()
+CPointerUtils::CPointerUtils()
 {
 }
-CPointer::~CPointer()
+CPointerUtils::~CPointerUtils()
 {
 }
 
@@ -36,12 +36,12 @@ CPointer::~CPointer()
  * Verificações
  */
 template<typename T>
-bool CPointer::IsValid(T* checkClass)
+bool CPointerUtils::IsValid(T* checkClass)
 {
   return (CheckPointer(checkClass) != POINTER_INVALID);
 }
 template<typename T1, typename T2>
-bool CPointer::IsEqual(T1* v1, T2* v2)
+bool CPointerUtils::IsEqual(T1* v1, T2* v2)
 {
   if(IsValid(v1) && IsValid(v2))
     {
@@ -50,7 +50,7 @@ bool CPointer::IsEqual(T1* v1, T2* v2)
   return (false);
 }
 template<typename T>
-bool CPointer::Delete(T* checkClass)
+bool CPointerUtils::Delete(T* checkClass)
 {
   if(IsValid(checkClass))
     {
@@ -60,4 +60,4 @@ bool CPointer::Delete(T* checkClass)
   return (false);
 }
 
-#endif /* POINTER_INCLUDED */
+#endif /* POINTERUTILS_INCLUDED */

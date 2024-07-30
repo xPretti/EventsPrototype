@@ -25,7 +25,7 @@ class CEventsData
     ~CEventsData();
 
     // Methods
-    void Execute(CEvent* event);
+    void Execute(IEvent* event);
 
   public:
     // Methods
@@ -64,7 +64,7 @@ CEventsData::~CEventsData()
 /**
  * Método para executar os eventos
  */
-void CEventsData::Execute(CEvent* event)
+void CEventsData::Execute(IEvent* event)
 {
   if(data.Select())
     {

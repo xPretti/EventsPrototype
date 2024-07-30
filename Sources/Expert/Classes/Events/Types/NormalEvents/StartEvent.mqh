@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//|                                                    StartEvent.mqh |
+//|                                                   StartEvent.mqh |
 //|                                        Copyright 2023, UpCoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
@@ -7,16 +7,20 @@
 #ifndef STARTEVENT_INCLUDED
 #define STARTEVENT_INCLUDED
 
-#include "Base/Event.mqh"
+#include "../../Interfaces/IEvent.mqh"
 
-class CStartEvent : public CEvent
+class CStartEvent : public IEvent
 {
   public:
     CStartEvent();
     ~CStartEvent();
     
-    string GetStarting() { return ("Starting..."); };
-
+    // Parameters
+    //..
+  
+  public:
+    // Properties
+    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_START); };
     CStartEvent* GetEvent() override { return (&this); };
 };
 
@@ -24,7 +28,6 @@ class CStartEvent : public CEvent
  * Construtores e Destrutores
  */
 CStartEvent::CStartEvent()
-    : CEvent(EVENT_TYPE_START)
 {
 }
 CStartEvent::~CStartEvent()

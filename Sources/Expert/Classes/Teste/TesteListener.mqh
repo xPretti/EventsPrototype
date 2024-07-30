@@ -8,9 +8,8 @@
 #define TESTELISTENER_INCLUDED
 
 #include "../Events/EventsManager.mqh"
-
-#include "../Events/Types/StartEvent.mqh"
-#include "../Events/Types/TickEvent.mqh"
+#include "../Events/Types/NormalEvents/TickEvent.mqh"
+#include "../Events/Types/NormalEvents/StartEvent.mqh"
 
 class CTesteListener : public IListener
 {
@@ -19,7 +18,7 @@ class CTesteListener : public IListener
     ~CTesteListener();
 
     // Methods
-    void OnEvent(CEvent* event);
+    void OnEvent(IEvent* event);
 
   protected:
     void OnTick(CTickEvent* event);
@@ -43,7 +42,7 @@ CTesteListener::~CTesteListener()
   Unregisters();
 }
 
-void CTesteListener::OnEvent(CEvent* event)
+void CTesteListener::OnEvent(IEvent* event)
 {
   switch(event.GetType())
     {
@@ -58,11 +57,11 @@ void CTesteListener::OnEvent(CEvent* event)
  */
 void CTesteListener::OnTick(CTickEvent* event)
 {
-  Print("CTesteListener - Tick!", event.GetName());
+  Print("CTesteListener - Tick!");
 }
 void CTesteListener::OnStart(CStartEvent* event)
 {
-  Print("CTesteListener - Start! ", event.GetStarting());
+  Print("CTesteListener - Start! ");
 }
 
 /**
@@ -78,7 +77,7 @@ void CTesteListener::Registers()
 void CTesteListener::Unregisters()
 {
   CEventsManager* eventsManager = CEventsManager::GetInstance();
-  if(CPointer::IsValid(eventsManager))
+  if(CPointerUtils::IsValid(eventsManager))
     {
       CEventsManager::GetInstance().UnregisterAll(&this);
     }

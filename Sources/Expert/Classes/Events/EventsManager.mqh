@@ -9,7 +9,6 @@
 
 #include "../../Enums/EventEnum.mqh"
 #include "Data/EventsData.mqh"
-#include "Types/Base/Event.mqh"
 #include <Generic/HashMap.mqh>
 
 class CEventsManager
@@ -20,7 +19,7 @@ class CEventsManager
 
   public:
     // Methods
-    bool Call(CEvent* event);
+    bool Call(IEvent* event);
 
     //- GET
     bool IsRegistered(ENUM_EVENT_TYPE type) { return (eventsData.ContainsKey(type)); };
@@ -73,9 +72,9 @@ CEventsManager* CEventsManager::GetInstance()
 /**
  * Métodos de execução
  */
-bool CEventsManager::Call(CEvent* event)
+bool CEventsManager::Call(IEvent* event)
 {
-  if(CPointer::IsValid(event))
+  if(CPointerUtils::IsValid(event))
     {
       CEventsData* data;
       if(GetEvent(event.GetType(), data))
@@ -93,7 +92,7 @@ bool CEventsManager::Call(CEvent* event)
 bool CEventsManager::Register(ENUM_EVENT_TYPE type, IListener* listener)
 {
   CEventsData* data;
-  if(CPointer::IsValid(listener) && GetOrCreateData(type, data))
+  if(CPointerUtils::IsValid(listener) && GetOrCreateData(type, data))
     {
       return (data.Register(listener));
     }
@@ -102,7 +101,7 @@ bool CEventsManager::Register(ENUM_EVENT_TYPE type, IListener* listener)
 bool CEventsManager::Unregister(ENUM_EVENT_TYPE type, IListener* listener)
 {
   CEventsData* data;
-  if(CPointer::IsValid(listener) && GetEvent(type, data))
+  if(CPointerUtils::IsValid(listener) && GetEvent(type, data))
     {
       bool success = data.Unregister(listener);
       if(data.GetSize() <= 0)
@@ -116,7 +115,7 @@ bool CEventsManager::Unregister(ENUM_EVENT_TYPE type, IListener* listener)
 bool CEventsManager::UnregisterNoDelete(ENUM_EVENT_TYPE type, IListener* listener)
 {
   CEventsData* data;
-  if(CPointer::IsValid(listener) && GetEvent(type, data))
+  if(CPointerUtils::IsValid(listener) && GetEvent(type, data))
     {
       bool success = data.UnregisterNoDelete(listener);
       if(data.GetSize() <= 0)
@@ -129,7 +128,7 @@ bool CEventsManager::UnregisterNoDelete(ENUM_EVENT_TYPE type, IListener* listene
 }
 bool CEventsManager::UnregisterAll(IListener* listener)
 {
-  if(CPointer::IsValid(listener))
+  if(CPointerUtils::IsValid(listener))
     {
       int keys[];
       CEventsData* values[];
@@ -150,7 +149,7 @@ bool CEventsManager::UnregisterAll(IListener* listener)
 }
 bool CEventsManager::UnregisterAllNoDelete(IListener* listener)
 {
-  if(CPointer::IsValid(listener))
+  if(CPointerUtils::IsValid(listener))
     {
       int keys[];
       CEventsData* values[];

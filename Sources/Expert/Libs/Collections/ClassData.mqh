@@ -7,7 +7,7 @@
 #ifndef CLASSDATA_INCLUDED
 #define CLASSDATA_INCLUDED
 
-#include "../../Utils/Pointer.mqh"
+#include "../../Utils/PointerUtils.mqh"
 #include "Data.mqh"
 
 // clang-format off
@@ -79,7 +79,7 @@ CClassData::~CClassData()
 template<typename T>
 bool CClassData::Add(T* value)
 {
-  if(CPointer::IsValid(value))
+  if(CPointerUtils::IsValid(value))
     {
       return (CData<T*>::Add(value));
     }
@@ -89,7 +89,7 @@ bool CClassData::Add(T* value)
 template<typename T>
 bool CClassData::SetValue(int index, T* value)
 {
-  if(CPointer::IsValid(value))
+  if(CPointerUtils::IsValid(value))
     {
       if(RemovePointerByNotEqual(index, value))
         {
@@ -102,7 +102,7 @@ bool CClassData::SetValue(int index, T* value)
 template<typename T>
 bool CClassData::Replace(int index, T* value)
 {
-  if(CPointer::IsValid(value))
+  if(CPointerUtils::IsValid(value))
     {
       if(RemovePointerByNotEqual(index, value))
         {
@@ -149,7 +149,7 @@ bool CClassData::RemovePointerByNotEqual(int index, T* compareValue)
       T* getRef = NULL;
       if(GetValue(index, getRef))
         {
-          if(!CPointer::IsEqual(getRef, compareValue))
+          if(!CPointerUtils::IsEqual(getRef, compareValue))
             {
               delete(getRef);
               return (true);
@@ -206,7 +206,7 @@ bool CClassData::GetValue(int index, T*& getValue)
 {
   if(CData<T*>::GetValue(index, getValue))
     {
-      return (CPointer::IsValid(getValue));
+      return (CPointerUtils::IsValid(getValue));
     }
   return (false);
 }
@@ -215,7 +215,7 @@ bool CClassData::GetSequenceValue(T*& getValue)
 {
   if(CData<T*>::GetSequenceValue(getValue))
     {
-      return (CPointer::IsValid(getValue));
+      return (CPointerUtils::IsValid(getValue));
     }
   return (false);
 }
@@ -225,7 +225,7 @@ ENUM_DATA_GET_TYPE CClassData::GetValueEnum(int index, T* getValue)
 {
   if(CData<T*>::GetValue(index, getValue))
     {
-      return (CPointer::IsValid(getValue) ? DATA_GET_TYPE_GET : DATA_GET_TYPE_NO_GET_NO_END);
+      return (CPointerUtils::IsValid(getValue) ? DATA_GET_TYPE_GET : DATA_GET_TYPE_NO_GET_NO_END);
     }
   return (DATA_GET_TYPE_END);
 }
@@ -235,7 +235,7 @@ ENUM_DATA_GET_TYPE CClassData::GetNextValue(T*& getValue)
 {
   if(CData<T*>::GetNextValue(getValue) != DATA_GET_TYPE_END)
     {
-      if(CPointer::IsValid(getValue))
+      if(CPointerUtils::IsValid(getValue))
         {
           return (DATA_GET_TYPE_GET);
         }
@@ -249,7 +249,7 @@ ENUM_DATA_GET_TYPE CClassData::GetPreviousValue(T*& getValue)
 {
   if(CData<T*>::GetPreviousValue(getValue) != DATA_GET_TYPE_END)
     {
-      if(CPointer::IsValid(getValue))
+      if(CPointerUtils::IsValid(getValue))
         {
           return (DATA_GET_TYPE_GET);
         }

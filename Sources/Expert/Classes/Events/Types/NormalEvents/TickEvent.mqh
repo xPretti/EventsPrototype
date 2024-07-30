@@ -7,16 +7,20 @@
 #ifndef TICKEVENT_INCLUDED
 #define TICKEVENT_INCLUDED
 
-#include "Base/Event.mqh"
+#include "../../Interfaces/IEvent.mqh"
 
-class CTickEvent : public CEvent
+class CTickEvent : public IEvent
 {
   public:
     CTickEvent();
     ~CTickEvent();
-    
-    string GetName() { return ("Tick, Tack"); };
-    
+
+    // Parameters
+    //..
+
+  public:
+    // Properties
+    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_TICK); };
     CTickEvent* GetEvent() override { return (&this); };
 };
 
@@ -24,7 +28,6 @@ class CTickEvent : public CEvent
  * Construtores e Destrutores
  */
 CTickEvent::CTickEvent()
-    : CEvent(EVENT_TYPE_TICK)
 {
 }
 CTickEvent::~CTickEvent()
