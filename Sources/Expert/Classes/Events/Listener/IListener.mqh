@@ -1,18 +1,18 @@
 //+------------------------------------------------------------------+
-//|                                                       IEvent.mqh |
+//|                                                     Listener.mqh |
 //|                                        Copyright 2023, Upcoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
 
-#ifndef IEVENT_INCLUDED
-#define IEVENT_INCLUDED
 
-#include "../../../Enums/EventEnum.mqh"
+#ifndef ILISTENER_INCLUDED
+#define ILISTENER_INCLUDED
 
-interface IEvent
+#include "../Event/Event.mqh"
+
+interface IListener
 {
-  ENUM_EVENT_TYPE GetType();
-  void* GetEvent();
+  void OnEvent(CEvent* event);
 };
 
-#endif /* IEVENT_INCLUDED */
+#endif /* ILISTENER_INCLUDED */

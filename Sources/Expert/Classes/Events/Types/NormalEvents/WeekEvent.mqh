@@ -1,34 +1,34 @@
 //+------------------------------------------------------------------+
-//|                                                    TickEvent.mqh |
+//|                                                    WeekEvent.mqh |
 //|                                        Copyright 2023, UpCoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
 
-#ifndef TICKEVENT_INCLUDED
-#define TICKEVENT_INCLUDED
+#ifndef WEEKEVENT_INCLUDED
+#define WEEKEVENT_INCLUDED
 
 #include "../../Event/Event.mqh"
 
-class CTickEvent : public CEvent
+class CWeekEvent : public CEvent
 {
   public:
-    CTickEvent();
-    ~CTickEvent();
+    CWeekEvent();
+    ~CWeekEvent();
     
   public:
     // Properties
-    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_TICK); };
-    CTickEvent* GetEvent() override { return (&this); };
+    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_WEEK); };
+    CWeekEvent* GetEvent() override { return (&this); };
 };
 
 /**
  * Construtores e Destrutores
  */
-CTickEvent::CTickEvent()
+CWeekEvent::CWeekEvent()
 {
 }
-CTickEvent::~CTickEvent()
+CWeekEvent::~CWeekEvent()
 {
 }
 
-#endif /* TICKEVENT_INCLUDED */
+#endif /* WEEKEVENT_INCLUDED */

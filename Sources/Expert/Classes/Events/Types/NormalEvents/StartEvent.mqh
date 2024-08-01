@@ -7,17 +7,14 @@
 #ifndef STARTEVENT_INCLUDED
 #define STARTEVENT_INCLUDED
 
-#include "../../Interfaces/IEvent.mqh"
+#include "../../Event/Event.mqh"
 
-class CStartEvent : public IEvent
+class CStartEvent : public CEvent
 {
   public:
     CStartEvent();
     ~CStartEvent();
-    
-    // Parameters
-    //..
-  
+
   public:
     // Properties
     ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_START); };

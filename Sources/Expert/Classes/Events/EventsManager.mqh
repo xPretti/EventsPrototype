@@ -19,7 +19,7 @@ class CEventsManager
 
   public:
     // Methods
-    bool Call(IEvent* event);
+    bool Call(CEvent* event);
 
     //- GET
     bool IsRegistered(ENUM_EVENT_TYPE type) { return (eventsData.ContainsKey(type)); };
@@ -72,7 +72,7 @@ CEventsManager* CEventsManager::GetInstance()
 /**
  * Métodos de execução
  */
-bool CEventsManager::Call(IEvent* event)
+bool CEventsManager::Call(CEvent* event)
 {
   if(CPointerUtils::IsValid(event))
     {

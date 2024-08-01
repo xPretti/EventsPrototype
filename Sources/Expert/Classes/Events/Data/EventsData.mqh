@@ -8,7 +8,7 @@
 #define EVENTSDATA_INCLUDED
 
 #include "../../../Libs/Collections/ClassData.mqh"
-#include "../Interfaces/IListener.mqh"
+#include "../Listener/IListener.mqh"
 
 class CEventsData
 {
@@ -25,7 +25,7 @@ class CEventsData
     ~CEventsData();
 
     // Methods
-    void Execute(IEvent* event);
+    void Execute(CEvent* event);
 
   public:
     // Methods
@@ -64,12 +64,12 @@ CEventsData::~CEventsData()
 /**
  * Método para executar os eventos
  */
-void CEventsData::Execute(IEvent* event)
+void CEventsData::Execute(CEvent* event)
 {
   if(data.Select())
     {
       IListener* getRef;
-      while(data.ToNext())
+      while(data.ToNext() && !event.IsCancelled())
         {
           if(data.GetSequenceValue(getRef))
             {

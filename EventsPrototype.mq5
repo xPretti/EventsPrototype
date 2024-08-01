@@ -10,15 +10,12 @@
 // Bibliotecas
 #include "Sources/Expert/Classes/Events/EventsManager.mqh"
 
-#include "Sources/Expert/Classes/Teste/TesteListener.mqh"
-
+#include "Sources/Expert/Classes/Listeners/TickListener.mqh"
 
 // Classes globais
-CTesteListener testeListener;
+CTickListener tickListener;
 
-
-// Armazenamento de eventos
-CStartEvent startEvent;
+// Armazenamento de eventos // OTIMIZAÇÃO DE MEMÓRIA // NÃO NECESSÁRIO
 CTickEvent tickEvent;
 
 /**
@@ -27,15 +24,6 @@ CTickEvent tickEvent;
 int OnInit()
 {
   int initId = INIT_SUCCEEDED;
-  
-  Print("\n\n\n");
-  
-  CEventsManager* eventsManager = CEventsManager::GetInstance();
-  if(CPointerUtils::IsValid(eventsManager))
-    {
-      Print("Eventos iniciados com sucesso!");
-    }
-  CEventsManager::GetInstance().Call(&startEvent);
   return (initId);
 }
 
@@ -51,10 +39,5 @@ void OnDeinit(const int reason)
  */
 void OnTick()
 {
-  static int count = 0;
-  count++;
-  if(count <= 10)
-    {
-      CEventsManager::GetInstance().Call(&tickEvent);
-    }
+  CEventsManager::GetInstance().Call(tickEvent.Clean());
 }

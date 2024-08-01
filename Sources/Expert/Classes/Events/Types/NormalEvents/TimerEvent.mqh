@@ -1,34 +1,34 @@
 //+------------------------------------------------------------------+
-//|                                                    TickEvent.mqh |
+//|                                                   TimerEvent.mqh |
 //|                                        Copyright 2023, UpCoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
 
-#ifndef TICKEVENT_INCLUDED
-#define TICKEVENT_INCLUDED
+#ifndef TIMEREVENT_INCLUDED
+#define TIMEREVENT_INCLUDED
 
 #include "../../Event/Event.mqh"
 
-class CTickEvent : public CEvent
+class CTimerEvent : public CEvent
 {
   public:
-    CTickEvent();
-    ~CTickEvent();
+    CTimerEvent();
+    ~CTimerEvent();
     
   public:
     // Properties
-    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_TICK); };
-    CTickEvent* GetEvent() override { return (&this); };
+    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_TIMER); };
+    CTimerEvent* GetEvent() override { return (&this); };
 };
 
 /**
  * Construtores e Destrutores
  */
-CTickEvent::CTickEvent()
+CTimerEvent::CTimerEvent()
 {
 }
-CTickEvent::~CTickEvent()
+CTimerEvent::~CTimerEvent()
 {
 }
 
-#endif /* TICKEVENT_INCLUDED */
+#endif /* TIMEREVENT_INCLUDED */

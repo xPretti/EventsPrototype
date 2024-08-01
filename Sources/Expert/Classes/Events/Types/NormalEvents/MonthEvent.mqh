@@ -1,34 +1,34 @@
 //+------------------------------------------------------------------+
-//|                                                    TickEvent.mqh |
+//|                                                   MonthEvent.mqh |
 //|                                        Copyright 2023, UpCoding. |
 //|                                         https://www.upcoding.net |
 //+------------------------------------------------------------------+
 
-#ifndef TICKEVENT_INCLUDED
-#define TICKEVENT_INCLUDED
+#ifndef MONTHEVENT_INCLUDED
+#define MONTHEVENT_INCLUDED
 
 #include "../../Event/Event.mqh"
 
-class CTickEvent : public CEvent
+class CMonthEvent : public CEvent
 {
   public:
-    CTickEvent();
-    ~CTickEvent();
+    CMonthEvent();
+    ~CMonthEvent();
     
   public:
     // Properties
-    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_TICK); };
-    CTickEvent* GetEvent() override { return (&this); };
+    ENUM_EVENT_TYPE GetType() { return (EVENT_TYPE_MONTH); };
+    CMonthEvent* GetEvent() override { return (&this); };
 };
 
 /**
  * Construtores e Destrutores
  */
-CTickEvent::CTickEvent()
+CMonthEvent::CMonthEvent()
 {
 }
-CTickEvent::~CTickEvent()
+CMonthEvent::~CMonthEvent()
 {
 }
 
-#endif /* TICKEVENT_INCLUDED */
+#endif /* MONTHEVENT_INCLUDED */
