@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                              TickSecondEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef TICKSECONDEVENT_INCLUDED
 #define TICKSECONDEVENT_INCLUDED
 

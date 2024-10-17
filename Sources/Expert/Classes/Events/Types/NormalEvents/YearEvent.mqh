@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                    YearEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef YEAREVENT_INCLUDED
 #define YEAREVENT_INCLUDED
 

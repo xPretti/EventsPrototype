@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                   StartEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef STARTEVENT_INCLUDED
 #define STARTEVENT_INCLUDED
 

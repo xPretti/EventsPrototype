@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                            OtimizedTickEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef OTIMIZEDTICKEVENT_INCLUDED
 #define OTIMIZEDTICKEVENT_INCLUDED
 

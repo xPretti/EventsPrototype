@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                  SecondEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef SECONDEVENT_INCLUDED
 #define SECONDEVENT_INCLUDED
 

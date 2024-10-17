@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                   MonthEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef MONTHEVENT_INCLUDED
 #define MONTHEVENT_INCLUDED
 

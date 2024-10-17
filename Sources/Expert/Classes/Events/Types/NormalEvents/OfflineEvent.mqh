@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                 OfflineEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef OFFLINEEVENT_INCLUDED
 #define OFFLINEEVENT_INCLUDED
 

@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                     BaseData.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef BASEDATA_INCLUDED
 #define BASEDATA_INCLUDED
 

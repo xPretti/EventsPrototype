@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                  OnlineEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef ONLINEEVENT_INCLUDED
 #define ONLINEEVENT_INCLUDED
 

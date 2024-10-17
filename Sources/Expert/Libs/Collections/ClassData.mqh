@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                    ClassData.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef CLASSDATA_INCLUDED
 #define CLASSDATA_INCLUDED
 

@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                        Event.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef EVENT_INCLUDED
 #define EVENT_INCLUDED
 

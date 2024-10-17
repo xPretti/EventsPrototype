@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                 PointerUtils.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef POINTERUTILS_INCLUDED
 #define POINTERUTILS_INCLUDED
 

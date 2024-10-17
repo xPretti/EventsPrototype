@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                    WeekEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef WEEKEVENT_INCLUDED
 #define WEEKEVENT_INCLUDED
 

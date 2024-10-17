@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                               RotaryBaseData.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef ROTARYBASEDATA_INCLUDED
 #define ROTARYBASEDATA_INCLUDED
 

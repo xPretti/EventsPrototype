@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                 TickListener.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef TICKLISTENER_INCLUDED
 #define TICKLISTENER_INCLUDED
 

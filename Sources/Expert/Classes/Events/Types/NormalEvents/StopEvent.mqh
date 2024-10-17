@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                    StopEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef STOPEVENT_INCLUDED
 #define STOPEVENT_INCLUDED
 

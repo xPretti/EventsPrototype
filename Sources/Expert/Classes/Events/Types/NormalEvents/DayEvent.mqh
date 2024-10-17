@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                     DayEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef DAYEVENT_INCLUDED
 #define DAYEVENT_INCLUDED
 

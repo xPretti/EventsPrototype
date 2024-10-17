@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                EventsManager.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef EVENTSMANAGER_INCLUDED
 #define EVENTSMANAGER_INCLUDED
 

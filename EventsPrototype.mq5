@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                              EventsPrototype.mq5 |
-//|                                        Copyright 2023, Upcoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 // Informações do robô
 #property description "▸ Um projeto experimental para gerenciamento de eventos.."
 

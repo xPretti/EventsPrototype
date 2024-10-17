@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                 RestartEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef RESTARTEVENT_INCLUDED
 #define RESTARTEVENT_INCLUDED
 

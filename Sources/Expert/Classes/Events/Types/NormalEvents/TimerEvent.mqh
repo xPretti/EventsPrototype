@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                   TimerEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef TIMEREVENT_INCLUDED
 #define TIMEREVENT_INCLUDED
 

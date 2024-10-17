@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                  CandleEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef CANDLEEVENT_INCLUDED
 #define CANDLEEVENT_INCLUDED
 

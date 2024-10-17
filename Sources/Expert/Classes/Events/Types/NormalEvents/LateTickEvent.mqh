@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                                LateTickEvent.mqh |
-//|                                        Copyright 2023, UpCoding. |
-//|                                         https://www.upcoding.net |
-//+------------------------------------------------------------------+
-
 #ifndef LATETICKEVENT_INCLUDED
 #define LATETICKEVENT_INCLUDED
 
